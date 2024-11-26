@@ -255,7 +255,7 @@ void Receive_CAN_Message(void)
 
     if (HAL_CAN_GetRxMessage(&hcan1, CAN_RX_FIFO0, &RxHeader, RxData) == HAL_OK)
     {
-        printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
+        //printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
         for (int i = 0; i < RxHeader.DLC; i++)
         {
             printf("%02X ", RxData[i]);
