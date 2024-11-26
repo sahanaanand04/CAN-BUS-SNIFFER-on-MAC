@@ -38,7 +38,7 @@ Step 4: Monitor CAN Traffic(python program)
 
 #Project Structure
  CAN-Bus-Sniffer/
- 
+
  ├── STM32_Firmware/
  
  │   ├── CANSniffer/
