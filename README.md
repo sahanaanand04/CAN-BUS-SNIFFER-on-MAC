@@ -7,6 +7,7 @@ The project consists of two parts:
 2. CAN Bus Simulator: A Python script that simulates the sending and receiving of CAN messages on a virtual CAN interface (vcan0), which you can adapt for a physical CAN setup or a USB-to-CAN adapter.
 
 #Table of Contents
+
 1.Prerequisites
 2.Setup Instructions
 3.Project Structure
@@ -16,11 +17,15 @@ The project consists of two parts:
 7.Troubleshooting
 
 #Prerequisites
+
 #1. Hardware
+
 - STM32 Development Board (e.g., STM32F407)
 - USB-to-CAN Adapter or a CAN Transceiver (e.g., MCP2551)
 - ST-Link Programmer/Debugger for flashing the STM32
+
 #2. Software
+
 - STM32CubeIDE, STMCube programmer, STMCube MX for STM32 development and flashing.
 - OpenOCD for debugging.
 - Python 3.x for CAN Bus simulation.
