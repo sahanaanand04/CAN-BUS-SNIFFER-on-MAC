@@ -1,0 +1,58 @@
+11:01:07 **** Incremental Build of configuration Debug for project CANSniffer ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:11: warning: implicit declaration of function 'Send_CAN_Message' [-Wimplicit-function-declaration]
+  113 |           Send_CAN_Message();
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:114:11: warning: implicit declaration of function 'Receive_CAN_Message' [-Wimplicit-function-declaration]
+  114 |           Receive_CAN_Message();
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:234:6: warning: conflicting types for 'Send_CAN_Message'; have 'void(void)'
+  234 | void Send_CAN_Message(void)
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:113:11: note: previous implicit declaration of 'Send_CAN_Message' with type 'void(void)'
+  113 |           Send_CAN_Message();
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:251:6: warning: conflicting types for 'Receive_CAN_Message'; have 'void(void)'
+  251 | void Receive_CAN_Message(void)
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:114:11: note: previous implicit declaration of 'Receive_CAN_Message' with type 'void(void)'
+  114 |           Receive_CAN_Message();
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Receive_CAN_Message':
+../Core/Src/main.c:258:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  258 |         printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
+      |         ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:258:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  258 |         printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
+      |         ^~~~~~
+../Core/Src/main.c:258:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:258:41: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  258 |         printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
+      |                                        ~^                  ~~~~~~~~~~~~~~
+      |                                         |                          |
+      |                                         unsigned int               uint32_t {aka long unsigned int}
+      |                                        %lX
+../Core/Src/main.c:258:49: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  258 |         printf("Received message: ID=0x%X, DLC=%d, Data=", RxHeader.StdId, RxHeader.DLC);
+      |                                                ~^                          ~~~~~~~~~~~~
+      |                                                 |                                  |
+      |                                                 int                                uint32_t {aka long unsigned int}
+      |                                                %ld
+arm-none-eabi-g++ -o "CANSniffer.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/sahana/can-bus-sniffer/CANSniffer/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CANSniffer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CANSniffer.elf
+ 
+arm-none-eabi-size  CANSniffer.elf 
+arm-none-eabi-objdump -h -S CANSniffer.elf  > "CANSniffer.list"
+   text	   data	    bss	    dec	    hex	filename
+  19508	    104	   2192	  21804	   552c	CANSniffer.elf
+Finished building: default.size.stdout
+ 
+Finished building: CANSniffer.list
+ 

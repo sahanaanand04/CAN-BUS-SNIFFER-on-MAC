@@ -1,0 +1,14 @@
+2024-11-23 16:37:03,544 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:16,484 - Exiting...
+2024-11-23 16:38:28,619 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:29,625 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:30,630 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:31,636 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:32,641 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-23 16:38:32,833 - VirtualBus was not properly shut down
+2024-11-25 12:41:15,150 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-25 12:41:16,152 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-25 12:41:17,153 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-25 12:41:18,155 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-25 12:41:19,160 - Message sent on vcan0: Timestamp:        0.000000    ID:      123    S Rx                DL:  4    11 22 33 44
+2024-11-25 12:41:21,081 - Exiting...
